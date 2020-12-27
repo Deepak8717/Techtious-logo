@@ -11,7 +11,7 @@ body {
   background: #fff;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  overflow: hidden;
 }
 .logo-container {
   width: 75%;

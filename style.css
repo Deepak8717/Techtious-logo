@@ -1,63 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 body {
   width: 100%;
   height: 100vh;
-  background: #0b0c10;
+  background: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.logo-container {
+  width: 75%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  position: relative;
+}
+.logo-container::before {
+  position: absolute;
+  content: "";
+  background: #0b0c10;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0% 0%, 100% 0, 50% 100%, 0% 100%);
 }
 #logo {
+  width: 50%;
+  position: relative;
+  top: 40%;
+  left: 10%;
+  z-index: 10;
   animation: fill 0.5s ease forwards 3s;
 }
 #logo path:nth-child(1) {
   stroke-dasharray: 363.09384;
   stroke-dashoffset: 363.09384;
-  animation: line-anim 2s ease forwards;
+  animation: line-anim 3s ease forwards;
 }
 #logo path:nth-child(2) {
   stroke-dasharray: 437.618;
   stroke-dashoffset: 437.618;
-  animation: line-anim 2s ease forwards 0.3s;
+  animation: line-anim 1s ease forwards 0.2s;
 }
 #logo path:nth-child(3) {
   stroke-dasharray: 364.8448791503906;
   stroke-dashoffset: 364.8448791503906;
-  animation: line-anim 2s ease forwards 0.6s;
+  animation: line-anim 1s ease forwards 0.3s;
 }
 #logo path:nth-child(4) {
   stroke-dasharray: 459.56695556640625;
   stroke-dashoffset: 459.56695556640625;
-  animation: line-anim 2s ease forwards 0.9s;
+  animation: line-anim 1s ease forwards 0.6s;
 }
 #logo path:nth-child(5) {
   stroke-dasharray: 292.2962341308594;
   stroke-dashoffset: 292.2962341308594;
-  animation: line-anim 2s ease forwards 1.2s;
+  animation: line-anim 2s ease forwards 1s;
 }
 #logo path:nth-child(6) {
   stroke-dasharray: 226.6685028076172;
   stroke-dashoffset: 226.6685028076172;
-  animation: line-anim 2s ease forwards 1.5s;
+  animation: line-anim 2s ease forwards 1.2s;
 }
 #logo path:nth-child(7) {
   stroke-dasharray: 398.1845703125;
   stroke-dashoffset: 398.1845703125;
-  animation: line-anim 2s ease forwards 1.8s;
+  animation: line-anim 2s ease forwards 1.4s;
 }
 #logo path:nth-child(8) {
   stroke-dasharray: 393.3802795410156;
   stroke-dashoffset: 393.3802795410156;
-  animation: line-anim 2s ease forwards 2.1s;
+  animation: line-anim 2s ease forwards 1.6s;
 }
 #logo path:nth-child(9) {
   stroke-dasharray: 409.9747009277344;
   stroke-dashoffset: 409.9747009277344;
-  animation: line-anim 2s ease forwards 2.4s;
+  animation: line-anim 2s ease forwards 1.8s;
 }
 
 @keyframes line-anim {
@@ -73,4 +95,42 @@ body {
   to {
     fill: #66fcf1;
   }
+}
+
+.form {
+  width: 25%;
+  color: #36b9cc;
+  text-align: center;
+  position: relative;
+  top: 30%;
+}
+.form form {
+  width: 100%;
+}
+.form form h1,
+h2 {
+  font-weight: 400;
+}
+.form form input {
+  width: 70%;
+  height: 2.7rem;
+  padding: 0.75rem;
+  border: 0;
+  outline: none;
+  margin: 10px auto;
+  border-bottom: 2px solid rgb(131, 131, 131);
+}
+.form form button {
+  width: 70%;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #36b9cc;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.form form .form-group {
+  margin-top: 20px;
 }
